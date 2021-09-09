@@ -1,38 +1,47 @@
 :root{
-    --maincolor:red;
-    --highlightedbackground:linear-gradient(180deg, var(--maincolor), green, var(--maincolor));
-    --textcolor:black;
-    --secondcolor:red;
-    --textbackground:lightgrey;
+    --maincolor:rgb(165, 61, 34);
+    --maincolor2:rgb(101, 206, 101);
+    --highlightedbackground:linear-gradient(180deg, var(--maincolor), rgb(44, 94, 44), var(--maincolor));
+    --textcolor:white;
+    --secondcolor:rgb(165, 61, 34);
+    --textbackground:rgb(43, 25, 9);
 
 }
 body{
     margin: 0;
     padding:0;
+    background-color: rgb(126, 111, 85);
     font-size: 1.5rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Rock Salt', cursive;
 }
 
 /* ----------------------------------------------------------------------
 The HEADER
 ---------------------------------------------------------------------- */
 Header{
-    display: inline-flex;
     width: 100%;
-    justify-content: space-between;
+    height: 10vh;
     background: var(--highlightedbackground);
     color: var(--textcolor);
     font-variant: small-caps;
 }
-
-H1{
-    margin-left:60px;
+#headercontent{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+h1{
+    margin:0;
+    padding: 20px 0;
 }
 
+
 #logo{
-    height: 5vw;
-    margin:20px 60px
-    
+    height: 10vh;
+    margin:0px;
+    position: absolute;
+    right: 0;
+    top:0
 }
 
 
@@ -47,10 +56,11 @@ nav{
     top: 0;
 }
 ol{
-    margin:0;
+    max-width: 1200px;;
+    margin:0 auto;
     padding:0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 5px 20px;
     
 }
@@ -69,6 +79,7 @@ a:hover{
     background: var(--highlightedbackground);
     color:lightgrey;
     box-shadow: 5px 5px 10px black;
+    font-weight: bolder;
 }
 
 /* ----------------------------------------------------------------------
@@ -82,16 +93,31 @@ main{
 
 article{
     background-color: var(--textbackground);
+    color: var(--textcolor);
     border-radius: 10px;
     padding:10px 50px;
-    margin-top: 20px;
+    margin-top: 5vh;
     margin-bottom: 20px;
     box-shadow: 5px 5px 10px black;
+    position: relative;
+    overflow: auto;
 }
 h2{
     font-variant: small-caps;
 }
+.img{
+    width: 55%;
 
+}
+.img:hover{
+    width: 100%;
+}
+p{
+    width: 35%;
+    position: absolute;
+    right: 5%;
+    
+}
 
 /* ----------------------------------------------------------------------
 The FOOTER
@@ -99,4 +125,20 @@ The FOOTER
 
 footer{
     background-color: var(--secondcolor)
+}
+
+/* ----------------------------------------------------------------------
+EXTREME RESPONSE
+---------------------------------------------------------------------- */
+
+@media screen and (max-width:600px){
+    body{font-size: 0.8rem;}
+    #logo{
+        display:none;
+    }
+    h1{
+     background-image: url("flag.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+ }
 }
