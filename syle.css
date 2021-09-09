@@ -77,6 +77,8 @@ li{
 a{
     text-decoration: none;
     color: var(--textcolor);
+    display: inline-block;
+    transition: transform .2s;
     
     
 }
@@ -84,9 +86,11 @@ a:hover{
     background: var(--highlightedbackground);
     color:lightgrey;
     box-shadow: 5px 5px 10px black;
-    /* font-weight: bolder; */
-
+    transform: scale(1.5);
 }
+ 
+
+
 
 /* ----------------------------------------------------------------------
 The MAIN
@@ -124,6 +128,7 @@ p{
     width: 35%;
     position: absolute;
     right: 5%;
+    top:200px;
     margin: 0;
     font-size: 1.2rem;
 }
@@ -149,6 +154,13 @@ EXTREME RESPONSE
     }
     header{
         height: 70px;
+    }
+    .img{
+        width: 100%;
+    }
+    p{
+        width: 100%;
+        position: static;
     }
 }
 
